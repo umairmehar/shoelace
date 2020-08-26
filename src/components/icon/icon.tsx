@@ -60,7 +60,7 @@ export class Icon {
   }
 
   setIcon() {
-    const url = this.name ? getAssetPath(`./icons/${this.name}.svg`) : this.src;
+    const url = this.name ? getAssetPath(`/icons/${this.name}.svg`) : this.src;
     requestIcon(url)
       .then(source => {
         const doc = parser.parseFromString(source, 'text/html');
